@@ -1,0 +1,38 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+@import './theme/index-theme';
+
+$banca-digital-web-primary: mat.m2-define-palette($cusca-blue, 500);
+$banca-digital-web-accent: mat.m2-define-palette($cusca-yellow, 500);
+
+$theme-theme: mat.m2-define-light-theme(
+  (
+    color: ( primary: $banca-digital-web-primary, accent: $banca-digital-web-accent),
+    typography: mat.m2-define-typography-config(
+      $font-family: 'Montserrat',
+      $button: mat.m2-define-typography-level(1.4rem, 1.4rem, 600),
+      $body-1: mat.m2-define-typography-level(
+        $font-family: 'Montserrat',
+        $font-weight: 600,
+        $font-size: 1.4rem
+      ),
+    ),
+    density: 0,    
+  )
+);
+
+:root {
+  @include mat.all-component-themes($theme-theme);
+}
+
+html,
+
+body {
+  height: 100%;
+  font-size: 62.5%;
+  background-color: #fff;
+  margin: 0;
+  font-family: Montserrat, "Helvetica Neue", sans-serif;
+}
