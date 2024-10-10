@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:cusca-test-dialog": "node dist/cusca-test-dialog/server/server.mjs"
+    "serve:ssr:cusca-test-dialog": "node dist/cusca-test-dialog/server/server.mjs",
+    "cusca-dialog-options": "npm run "
   },
   "private": true,
   "dependencies": {
